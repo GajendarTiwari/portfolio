@@ -26,7 +26,7 @@ const Hero = () => {
                <div className="relative z-10 text-center max-w-3xl">
 
                    <button
-                       onClick={handleCopy}
+                       onClick={() => window.open('/Gajendar_Resume.pdf', '_blank')}
                        className="mx-auto group relative flex items-center space-x-2 px-4 py-2 mb-6 text-sm font-bold text-white rounded-full shadow-2xl shadow-zinc-900 bg-zinc-950 ring-1 ring-white/10 transition-all duration-300 hover:ring-white/30"
                    >
 
@@ -50,7 +50,7 @@ const Hero = () => {
                             I'm a <FlipWords words={words} />
                         </span>
                    </div>
-                   <ShimmerButton className="shadow-2xl mx-auto mt-6 flex items-center gap-2"  onClick={() => window.open('/my_resume.pdf', '_blank')}>
+                   <ShimmerButton className="shadow-2xl mx-auto mt-6 flex items-center gap-2"    onClick={() => window.open('/Gajendar_Resume.pdf', '_blank')}>
                        <BookTextIcon className="stroke-white "/>
                        <span className="whitespace-pre-wrap text-center text-sm font-medium leading-none tracking-tight text-white dark:from-white dark:to-slate-900/10 lg:text-lg">
 My Resume
