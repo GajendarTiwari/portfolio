@@ -1,0 +1,58 @@
+"use client";
+
+import {
+    AnimatedSpan,
+    Terminal,
+    TypingAnimation,
+} from "@/components/magicui/terminal";
+import Link from "next/link";
+import { BackgroundBeams } from "@/components/ui/background-beams";
+
+const Contact = () => {
+    return (
+        <section id="contact" className="relative py-10 bg-white dark:bg-black overflow-hidden">
+            <BackgroundBeams />
+
+            <div className="text-center">
+                <h2 className="text-3xl md:text-5xl font-bold text-gray-900 dark:text-white">
+                    Let's Connect 🚀
+                </h2>
+                <p className="text-lg text-gray-600 dark:text-gray-300 mt-2">
+                    Have a project in mind, looking to hire,<br /> or just want to say hi? Drop me a message!
+                </p>
+            </div>
+
+            <div className="mt-12 flex flex-col items-center justify-center">
+                <Terminal className="border border-gray-800 w-[90%] max-w-[600px] p-6 rounded-xl shadow-lg">
+                    <TypingAnimation>&gt; Initializing Contact...</TypingAnimation>
+
+                    <AnimatedSpan delay={1500} className="text-green-500">
+                        <span>✔ Checking availability...</span>
+                    </AnimatedSpan>
+
+                    <AnimatedSpan delay={2000} className="text-green-500">
+                        <span>✔ Ready to collaborate.</span>
+                    </AnimatedSpan>
+
+                    <AnimatedSpan delay={2500} className="text-green-500">
+                        <span>✔ Opening communication channels...</span>
+                    </AnimatedSpan>
+
+                    <AnimatedSpan delay={3000} className="text-yellow-500 whitespace-normal break-words">
+                        <span>⚡ Email: <Link href="mailto:tsonu8942@gmail.com" className="underline">tsonu8942@gmail.com</Link></span>
+                    </AnimatedSpan>
+
+                    <AnimatedSpan delay={3500} className="text-blue-500 whitespace-normal break-words">
+                        <span>🔗 LinkedIn: <Link href="https://www.linkedin.com/in/gajendartiwari/" className="underline">https://www.linkedin.com/in/gajendartiwari/</Link></span>
+                    </AnimatedSpan>
+
+                    <AnimatedSpan delay={4000} className="text-pink-500 whitespace-normal break-words">
+                        <span>📂 GitHub: <Link href="https://github.com/GajendarTiwari" className="underline">https://github.com/GajendarTiwari</Link></span>
+                    </AnimatedSpan>
+                </Terminal>
+            </div>
+        </section>
+    );
+}
+
+export default Contact;
